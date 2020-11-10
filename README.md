@@ -1,5 +1,5 @@
-# laravel-google-sheets-collection
-A simple Laravel package to create beautiful collection data from Google Spreadsheet URL.
+# Google Sheets Collection
+A simple Laravel package to create beautiful collection data from Google Sheets URL.
 
 ```php
 <?php
@@ -7,7 +7,8 @@ A simple Laravel package to create beautiful collection data from Google Spreads
 use namespace Fathilarham\GsheetsCollection;
 
 // GsheetsCollection::get($url)->get($sheet = 1);
-$data = GsheetsCollection::url('https://docs.google.com/spreadsheets/d/1Khm5oGnCAw3Hw3SqitpF87AtnJ4FAYOo40Qz3Dgt9S4/edit?usp=sharing')->get();
+$url = 'https://docs.google.com/spreadsheets/d/1Khm5oGnCAw3Hw3SqitpF87AtnJ4FAYOo40Qz3Dgt9S4/edit?usp=sharing';
+$data = GsheetsCollection::url($url)->get();
 
 ```
 ## Installation
