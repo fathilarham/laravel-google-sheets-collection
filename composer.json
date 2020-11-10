@@ -1,6 +1,7 @@
 {
     "name": "fatdev/google-sheets-collection",
     "description": "A simple Laravel packages to create a beautiful data collection from the Google Spreadsheet.",
+    "type": "library",
     "license": "MIT",
     "authors": [{
         "name": "Fathil Arham",
