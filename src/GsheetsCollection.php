@@ -31,6 +31,11 @@ class GsheetsCollection{
         return (new GsheetsCollection($url));
     }
 
+    public function getProcessedUrl()
+    {
+        return $this->spreadsheet_json_url;
+    }
+
     public function get($sheet = 1)
     {
         // Set Spreadsheet Sheet
@@ -61,15 +66,22 @@ class GsheetsCollection{
         $column_counter = 0;
         $row = [];
         $loop_counter = count($columns);
-
+        $row_counter = 2;
+        $col_counter = 1;
         while($loop_counter < count($data)){
-            $row[$columns[$column_counter]] = $data[$loop_counter]->{'gs$cell'}->inputValue;
-            $column_counter++;
-            $loop_counter++;
+            if($data[$loop_counter]->{'gs$cell'}->row == $row_counter && $data[$loop_counter]->{'gs$cell'}->col == $col_counter){
+                $row[$columns[($col_counter-1)]] = $data[$loop_counter]->{'gs$cell'}->inputValue;
+                $loop_counter++;
+            }else{
+                $row[$columns[($col_counter-1)]] = null;
+            }
 
-            if($column_counter == (count($columns))){
+            $col_counter++;
+
+            if(($col_counter-1) == count($columns)){
+                $col_counter = 1;
+                $row_counter++;
                 $result->push($row);
-                $column_counter = 0;
             }
         }
 
