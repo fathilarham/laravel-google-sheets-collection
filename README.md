@@ -7,7 +7,7 @@ A simple Laravel package to create beautiful collection data from Google Sheets 
 use namespace Fathilarham\GsheetsCollection;
 
 // GsheetsCollection::get($url)->get($sheet = 1);
-$url = 'https://docs.google.com/spreadsheets/d/1Khm5oGnCAw3Hw3SqitpF87AtnJ4FAYOo40Qz3Dgt9S4/edit?usp=sharing';
+$url = 'https://docs.google.com/spreadsheets/d/1zQIz2xmAGjsvlDhECrvMxbnMmjmLhuWWIOYn2dar18M/edit?usp=sharing';
 $data = GsheetsCollection::url($url)->get();
 
 ```
@@ -30,7 +30,7 @@ require 'vendor/autoload.php';
 
 use Fathilarham\GsheetsCollection;
 
-$url = 'https://docs.google.com/spreadsheets/d/1Khm5oGnCAw3Hw3SqitpF87AtnJ4FAYOo40Qz3Dgt9S4/edit?usp=sharing';
+$url = 'https://docs.google.com/spreadsheets/d/1zQIz2xmAGjsvlDhECrvMxbnMmjmLhuWWIOYn2dar18M/edit?usp=sharing';
 
 $data = GsheetsCollection::url($url)->get();
 ```
