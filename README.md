@@ -1,4 +1,4 @@
-# Google Sheets Collection
+# Laravel Google Sheets Collection
 A simple Laravel package to create beautiful collection data from Google Sheets URL.
 
 ```php
